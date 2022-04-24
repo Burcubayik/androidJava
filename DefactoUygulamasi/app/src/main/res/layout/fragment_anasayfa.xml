@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutMode="opticalBounds"
+
+    tools:context=".fragment.AnasayfaFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAnasayfa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarAnasayfa" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSirala" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:itemIconTint="@color/bottomColor"
+        app:itemRippleColor="#DFD6D6D6"
+        app:itemTextColor="@color/bottomColor"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu" />
+
+    <TextView
+        android:id="@+id/textViewGosterilenUrun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/poppins"
+        android:text="TextView"
+        android:textColor="@color/yazi1"
+        android:textSize="14sp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/ivGorunum"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rvCategory" />
+
+    <ImageView
+        android:id="@+id/ivGorunum"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvGorunum"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGosterilenUrun"
+        app:srcCompat="@drawable/gorunus" />
+
+    <TextView
+        android:id="@+id/tvGorunum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="Görünüm"
+        android:textColor="@color/yazi1"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/ivSirala"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivGorunum"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGosterilenUrun" />
+
+    <ImageView
+        android:id="@+id/ivFiltrele"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvFiltrele"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvSirala"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGosterilenUrun"
+        app:srcCompat="@drawable/filter" />
+
+    <TextView
+        android:id="@+id/tvSirala"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="Sırala"
+        android:textColor="@color/yazi1"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/ivFiltrele"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivSirala"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGosterilenUrun" />
+
+    <ImageView
+        android:id="@+id/ivSirala"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/tvSirala"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvGorunum"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGosterilenUrun"
+        app:srcCompat="@drawable/arrows" />
+
+    <TextView
+        android:id="@+id/tvFiltrele"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Filtrele"
+        android:textColor="@color/yazi1"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/ivFiltrele"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGosterilenUrun" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

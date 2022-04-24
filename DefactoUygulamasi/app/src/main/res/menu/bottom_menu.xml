@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:icon="@drawable/home"
+        android:title="Ana Sayfa"
+        />
+    <item
+        android:icon="@drawable/category"
+        android:title="Kategoriler" />
+    <item
+        android:icon="@drawable/shopping_bag"
+        android:title="Sepetim" />
+    <item
+        android:icon="@drawable/favorite"
+        android:title="Favorilerim" />
+    <item
+        android:icon="@drawable/account"
+        android:title="Hesabım" />
+</menu>
