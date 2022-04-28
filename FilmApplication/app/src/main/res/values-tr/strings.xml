@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FilmApplication</string>
+    <string name="welcomeLetter">Bakalım sırada ne var.</string>
+    <string name="mainLetter"><![CDATA[TV şovlarını ve filmleri istediğiniz zaman, istediğiniz yerde ve nereye giderseniz gidin izleyin.]]></string>
+    <string name="buttonText">Başlayın</string>
+    <string name="signIn">KAYIT OL</string>
+</resources>

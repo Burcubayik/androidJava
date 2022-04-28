@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Netflix</string>
+    <string name="welcomeLetter">See what\'s next.</string>
+    <string name="mainLetter"><![CDATA[Watch TV shows and movies anytime, anywhere & wherever you go.]]></string>
+    <string name="buttonText">Get Started</string>
+    <string name="signIn">SIGN IN</string>
+</resources>
