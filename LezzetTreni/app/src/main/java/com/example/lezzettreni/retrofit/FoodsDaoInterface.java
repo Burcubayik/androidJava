@@ -12,7 +12,18 @@ import retrofit2.http.POST;
 public interface FoodsDaoInterface {
     //http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php
     @GET("yemekler/tumYemekleriGetir.php")
-    Call<FoodsAnswer> Allfoods();
+    Call<FoodsAnswer> allFoods();
+
+    @POST("yemekler/sepeteYemekEkle.php")
+    @FormUrlEncoded
+    Call<CartFoodAnswer> addToCart
+            (@Field("yemek_adi") String yemek_adi, @Field("yemek_resim_adi") String yemek_resim_adi,
+             @Field("yemek_fiyat") int yemek_fiyat, @Field("yemek_siparis_adet") int yemek_siparis_adet, @Field("kullanici_adi") String kullanici_adi);
+
+    @POST("yemekler/sepettekiYemekleriGetir.php")
+    @FormUrlEncoded
+    Call<CartFoodAnswer> getCartFoods (@Field("kullanici_adi") String userName);
+
 
 
 }

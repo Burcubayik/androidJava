@@ -13,9 +13,6 @@
         <action
             android:id="@+id/goToDetail"
             app:destination="@id/detailFragment" />
-        <action
-            android:id="@+id/homeToCart"
-            app:destination="@id/cartFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailFragment"
@@ -35,7 +32,7 @@
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" >
         <argument
-            android:name="foods"
-            app:argType="com.example.lezzettreni.entity.Foods" />
+            android:name="cartFood"
+            app:argType="com.example.lezzettreni.entity.CartFood" />
     </fragment>
 </navigation>

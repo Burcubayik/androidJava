@@ -3,7 +3,9 @@ package com.example.lezzettreni.entity;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class CartFood {
+import java.io.Serializable;
+
+public class CartFood implements Serializable {
     @SerializedName("sepet_yemek_id")
     @Expose
     private int sepet_yemek_id;
@@ -23,7 +25,7 @@ public class CartFood {
     @Expose
     private String kullanici_adi;
 
-    public CartFood() {
+    public CartFood()  {
     }
 
     public CartFood(int sepet_yemek_id, String yemek_adi, String yemek_resim_adi, int yemek_fiyat, int yemek_siparis_adet, String kullanici_adi) {

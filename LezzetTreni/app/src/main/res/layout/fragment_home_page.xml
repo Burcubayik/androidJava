@@ -75,14 +75,14 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/textView2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="24dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="24dp"
                     android:layout_marginEnd="24dp"
                     android:fontFamily="@font/noto_sans"
-                    android:text="@string/lastMeals"
+                    android:text="Tüm Yemekler"
                     android:textColor="@color/yaziRenk1"
                     android:textSize="16sp"
                     android:textStyle="bold"
@@ -91,49 +91,20 @@
                     app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerViewLastSeen"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginTop="24dp"
-                    app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-                    app:spanCount="1"
-                    android:orientation="horizontal"
-                    app:layout_constraintBottom_toTopOf="@+id/textView2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="24dp"
-                    android:fontFamily="@font/noto_sans"
-                    android:text="@string/allFoods"
-                    android:textColor="@color/yaziRenk1"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView"
-                    app:layout_constraintTop_toTopOf="@id/recyclerViewLastSeen" />
-
-                <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerViewAllFoods"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
 
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="32dp"
                     android:adapter="@{foodsAdapter}"
+                    android:orientation="vertical"
                     android:scrollbars="none"
                     app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-                    app:spanCount="2"
-                    android:orientation="vertical"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/textView2" />
+                    app:layout_constraintTop_toTopOf="@id/textView2"
+                    app:spanCount="2" />
 
                 <TextView
                     android:id="@+id/textView4"

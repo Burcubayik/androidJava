@@ -15,9 +15,12 @@ import com.example.lezzettreni.databinding.CartCardDesignBinding;
 import com.example.lezzettreni.databinding.FragmentCartBinding;
 import com.example.lezzettreni.entity.CartFood;
 import com.example.lezzettreni.entity.Foods;
+import com.example.lezzettreni.fragment.CartFragmentArgs;
 import com.example.lezzettreni.view.CartFragmentViewModel;
 import com.example.lezzettreni.view.HomePageFragmentViewModel;
+import com.squareup.picasso.Picasso;
 
+import java.util.HashSet;
 import java.util.List;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CardDesignHolder> {
@@ -25,12 +28,15 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CardDesignHold
     private List<CartFood> cartFoodsList;
     private CartFragmentViewModel viewModel;
 
+
+
+
     public CartAdapter(Context mContext, List<CartFood> cartFoodsList, CartFragmentViewModel viewModel) {
         this.mContext = mContext;
         this.cartFoodsList = cartFoodsList;
         this.viewModel = viewModel;
-    }
 
+    }
 
 
     public class CardDesignHolder extends RecyclerView.ViewHolder {
@@ -55,10 +61,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CardDesignHold
         CartFood cartFood = cartFoodsList.get(position);
         CartCardDesignBinding t = holder.design;
         t.setCartFoodObject(cartFood);
-
-
-
-
+        String url = "http://kasimadalan.pe.hu/yemekler/resimler/" + cartFood.getYemek_resim_adi();
+        Picasso.get().load(url).into(t.imageView2);
     }
 
     @Override

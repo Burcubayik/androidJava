@@ -61,11 +61,6 @@ public class FoodsAdapter extends RecyclerView.Adapter<FoodsAdapter.CardDesignHo
         String url = "http://kasimadalan.pe.hu/yemekler/resimler/" + food.getPictureName();
         Picasso.get().load(url).into(t.imageViewHomeList);
 
-        t.buttonHomeAddToCart.setOnClickListener(view ->{
-            HomePageFragmentDirections.HomeToCart homeToCart = HomePageFragmentDirections.homeToCart(food);
-            Snackbar.make(view,"Eklendi",Snackbar.LENGTH_SHORT).show();
-        });
-
 
 
     }
